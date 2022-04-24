@@ -1009,7 +1009,12 @@ int Optimizer::PoseOptimization(Frame *pFrame)
         vSE3->setEstimate(g2o::SE3Quat(Tcw.unit_quaternion().cast<double>(),Tcw.translation().cast<double>()));
 
         optimizer.initializeOptimization(0);
-        optimizer.optimize(its[it]);
+        try{
+            optimizer.optimize(its[it]);
+        }
+        catch(int e){
+            cout << "optimization error!!!" << endl;
+        }
 
         nBad=0;
         for(size_t i=0, iend=vpEdgesMono.size(); i<iend; i++)

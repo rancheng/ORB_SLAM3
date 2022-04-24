@@ -112,3 +112,8 @@ Viewer.ViewpointZ: -1.8
 Viewer.ViewpointF: 500.0
 Viewer.imageViewScale: 1.0
 
+#--------------------------------------------------------------------------------------------
+# Map and Localization
+#--------------------------------------------------------------------------------------------
+# System.LoadAtlasFromFile: /home/ran/work/atlas_map
+# System.SaveAtlasToFile: /home/ran/work/ORB_SLAM3/results/atlas_map_mh05
